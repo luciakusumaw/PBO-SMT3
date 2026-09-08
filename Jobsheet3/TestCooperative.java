@@ -17,5 +17,16 @@ public class TestCooperative {
         System.out.println("\nPaying 3,000,000 installments");
         member1.installment(3000000);
         System.out.println("Current loan amount: " + member1.getLoanAmount());
+
+        System.out.println("==========================================");
+        Member member2 = new Member("21456000", "Rita", 1500000);
+        System.out.println("Member Name: "+ member2.getName());
+        System.out.println("Loan Limit: "+ member2.getLimitLoan());
+
+        System.out.println("\nBorrow 1,000,000..");
+        member2.borrow(1000000);
+        System.out.println("Current loan amount: "+member2.getLoanAmount());
+        System.out.println("\nPaying 50,000 installments");
+        member2.installment(50000);
     }
 }

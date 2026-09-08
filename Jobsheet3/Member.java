@@ -11,19 +11,21 @@ public class Member {
         this.loanAmount = 0;
     }
 
-    public void borrow(int amount){
-        if (loanAmount+amount>loanLimit){
+    public void borrow(int borrowAmount){
+        if (loanAmount+borrowAmount>loanLimit){
             System.out.println("Sorry the loan amount exceeds the limit.");
         } else{
-            loanAmount += amount;
+            loanAmount += borrowAmount;
         }
     }
 
-    public void installment(int amount){
-        if (amount > loanAmount){
+    public void installment(int installmentAmount){
+        if (installmentAmount > loanAmount){
             System.out.println("Installment exceeds the current loan amount");
+        }else if(installmentAmount<(0.10*loanAmount)){
+            System.out.println("Sorry, the installment must be 10% of the loan amount");
         }else{
-            loanAmount -= amount;
+            loanAmount -= installmentAmount;
         }
     }
 
