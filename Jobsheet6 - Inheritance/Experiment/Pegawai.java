@@ -5,16 +5,18 @@ public class Pegawai {
     public String name;
     public double salary;
 
-    public Pegawai(){
-    System.out.println("Object from Employee class has been made");
+    // Parameterized constructor in the parent class
+    public Pegawai (String nip, String name, double salary) {
+        this.nip = nip;
+        this.name = name;
+        this.salary = salary;
     }
 
-    public String getInfo(){
+    public String getInfo() {
         String info = "";
-        info += "NIP        : "+ nip+ "\n";
-        info += "NAME       : "+ name+ "\n";
-        info += "SALARY     : "+ salary+ "\n";
-
+        info += "NIP     : " + nip + "\n";
+        info += "NAME    : " + name + "\n";
+        info += "SALARY  : " + salary + "\n";
         return info;
     }
 }

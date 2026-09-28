@@ -3,12 +3,9 @@ package Experiment;
 public class Dosen extends Pegawai {
     public String nidn;
 
-    public Dosen() {
-        System.out.println("Object from class Dosen has been made");
-    }
-
     public Dosen(String nip, String name, double salary, String nidn) {
-        System.out.println("Object from class Dosen made with parameterized constructor");
+        super (nip, name, salary); 
+        this.nidn = nidn;
     }
 
     public String getAllInfo() {
