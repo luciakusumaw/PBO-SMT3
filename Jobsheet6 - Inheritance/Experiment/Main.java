@@ -8,6 +8,6 @@ public class Main {
           dosen1.salary = 3000000;
           dosen1.nidn = "1989432439";
 
-          System.out.println(dosen1.getInfo());
+          System.out.println(dosen1.getAllInfo());
     }
 }
