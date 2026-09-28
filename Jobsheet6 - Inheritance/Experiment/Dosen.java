@@ -1,20 +1,26 @@
 package Experiment;
 
 public class Dosen extends Pegawai {
-
     public String nidn;
-    public Dosen(){
-        System.out.println("Object from Lecturer class has been made");
+
+    public Dosen() {
+        System.out.println("Object from class Dosen has been made");
     }
 
-    public String getInfo(){
-        return "NIDN        : " + this.nidn + "\n";
+    public Dosen(String nip, String name, double salary, String nidn) {
+        this.nip = nip;
+        this.name = name;
+        this.salary = salary;
+        this.nidn = nidn;
+        System.out.println("Object from class Dosen made with parameterized constructor");
     }
 
-    public String getAllInfo(){
-        String info = super.getInfo();
-        info += this.getInfo();
-
+    public String getAllInfo() {
+        String info = "";
+        info += "NIP             : " + super.nip + "\n";
+        info += "NAME            : " + super.name + "\n";
+        info += "SALARY          : " + super.salary + "\n";
+        info += "NIDN            : " + this.nidn + "\n";
         return info;
     }
 }
