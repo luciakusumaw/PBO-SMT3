@@ -8,10 +8,6 @@ public class Dosen extends Pegawai {
     }
 
     public Dosen(String nip, String name, double salary, String nidn) {
-        this.nip = nip;
-        this.name = name;
-        this.salary = salary;
-        this.nidn = nidn;
         System.out.println("Object from class Dosen made with parameterized constructor");
     }
 
